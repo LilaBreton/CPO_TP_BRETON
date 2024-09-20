@@ -25,22 +25,34 @@ public class Exo3 {
         int operateur; 
         int operande1;
         int operande2;
+        int result;
         
         System.out.println("Veuillez entrer un chiffre :");
-        operateur = ;
+        operateur = sc.nextInt();
         System.out.println("Veuillez entrer un nombre :");
-        operande1 = ;
+        operande1 = sc.nextInt();
         System.out.println("Veuillez entrer un nombre :");
-        operande2 = ;
+        operande2 = sc.nextInt();
         
+        if (operateur=1){
+            result = operande1 + operande2
+        }
         
+        if (operateur=2){
+            result = operande1 - operande2
+        } 
         
+        if (operateur=3){
+            result = operande1 * operande2
+        }
         
+        if (operateur=4){
+            result = operande1 / operande2
+        }
         
-        
-        
-        
-        
+        if (operateur=5){
+            result = operande1 % operande2
+        }
         
         
     }
