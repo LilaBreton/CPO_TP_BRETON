@@ -72,7 +72,6 @@ public class Exo3 {
         
         
         System.out.println("The result is :"+ result);
-        
     }
     
 }
