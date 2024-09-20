@@ -22,8 +22,16 @@ public class Exo3 {
         System.out.println("4) Divide");
         System.out.println("5) Modulo");
         
+        int operateur; 
+        int operande1;
+        int operande2;
         
-        
+        System.out.println("Veuillez entrer un chiffre :");
+        operateur = ;
+        System.out.println("Veuillez entrer un nombre :");
+        operande1 = ;
+        System.out.println("Veuillez entrer un nombre :");
+        operande2 = ;
         
         
         
