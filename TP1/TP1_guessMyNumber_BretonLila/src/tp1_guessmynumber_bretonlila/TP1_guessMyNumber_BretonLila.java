@@ -29,22 +29,24 @@ public class TP1_guessMyNumber_BretonLila {
         int nb = generateurAleat.nextInt(100);
         System.out.println("Veuillez saisir un nombre entre 0 et 100 :");
         int nombre = sc.nextInt();
+        int compteur = 0;
         
         while (nombre != nb) {
             if (nb>nombre){
                 System.out.println("Trop petit");
                 System.out.println("Veuillez saisir un nombre plus grand :");
                 nombre = sc.nextInt();
+                compteur += 1;
             }
-            else if (nb<nombre){
+            
+            else {
                 System.out.println("Trop grand");
                 System.out.println("Veuillez saisir un nombre plus petit :");
                 nombre = sc.nextInt();
-            }
-            else {
-                System.out.println("Gagne");
-                //System.out.println("Vous avez effectue " + compteur + " tentatives");
+                compteur += 1;
             }
         }
+        System.out.println("Vous avez gagne");
+        System.out.println("Vous avez effectue " + (compteur+1) + " coups");
     }
 }
