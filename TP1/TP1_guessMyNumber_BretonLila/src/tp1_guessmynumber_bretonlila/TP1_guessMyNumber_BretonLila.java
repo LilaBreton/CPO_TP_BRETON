@@ -26,29 +26,45 @@ public class TP1_guessMyNumber_BretonLila {
             System.out.print(n + " ");
         }
         
+        System.out.println(" ");
         int nb;
         int nombre;
-        int compteur = 0;
+        int compteur;
         int niveau;
         
         System.out.println("1) Facile");
         System.out.println("2) Normal");
         System.out.println("3) Difficile");
-        System.out.println("Veuillez saisir le numero du niveau de difficulté que vous avez choisi :");
+        System.out.println("Veuillez saisir le numero du niveau de difficulte que vous avez choisi :");
         niveau = sc.nextInt();
         
         if (niveau == 1){
             nb = generateurAleat.nextInt(70);
+            compteur = 1;
             System.out.println("Veuillez saisir un nombre entre 0 et 70 :");
             nombre = sc.nextInt();
             while (nombre != nb) {
-                if (nb>nombre){
+                if (nb>(nombre+15)){
+                    System.out.println("Beaucoup trop petit");
+                    System.out.println("Veuillez saisir un nombre plus grand :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+                
+                else if (nb>nombre){
                     System.out.println("Trop petit");
                     System.out.println("Veuillez saisir un nombre plus grand :");
                     nombre = sc.nextInt();
                     compteur += 1;
                 }
-            
+                
+                else if (nb<(nombre-15)){
+                    System.out.println("Beaucoup trop grand");
+                    System.out.println("Veuillez saisir un nombre plus petit :");
+                    nombre = sc.nextInt();
+                    compteur += 1;
+                }
+                    
                 else {
                     System.out.println("Trop grand");
                     System.out.println("Veuillez saisir un nombre plus petit :");
@@ -57,11 +73,13 @@ public class TP1_guessMyNumber_BretonLila {
                 }
             }
             System.out.println("Vous avez gagne");
-            System.out.println("Vous avez effectue " + (compteur+1) + " coups");
+            System.out.println("Vous avez effectue " + compteur + " coups");
         }
+        
         
         else if (niveau == 2){
             nb = generateurAleat.nextInt(100);
+            compteur = 1;
             System.out.println("Veuillez saisir un nombre entre 0 et 100 :");
             nombre = sc.nextInt();
             while (nombre != nb) {
@@ -80,14 +98,17 @@ public class TP1_guessMyNumber_BretonLila {
                 }
             }
             System.out.println("Vous avez gagne");
-            System.out.println("Vous avez effectue " + (compteur+1) + " coups");
+            System.out.println("Vous avez effectue " + compteur + " coups");
         }
+        
         
         else if (niveau == 3){
             nb = generateurAleat.nextInt(200);
+            compteur = 1;
             System.out.println("Veuillez saisir un nombre entre 0 et 200 :");
+            System.out.println("Vous avez 7 coups");
             nombre = sc.nextInt();
-            while (nombre != nb && compteur<=7) {
+            while (nombre != nb && compteur<7) {
                 if (nb>nombre){
                     System.out.println("Trop petit");
                     System.out.println("Veuillez saisir un nombre plus grand :");
@@ -102,19 +123,20 @@ public class TP1_guessMyNumber_BretonLila {
                     compteur += 1;
                 }
             }
-            if (nb = nombre && compteur<=7) {
+            
+            if (nb == nombre) {
                 System.out.println("Vous avez gagne");
-                System.out.println("Vous avez effectue " + (compteur+1) + " coups");
+                System.out.println("Vous avez effectue " + compteur + " coups");
             }
-            else if (nb != nombre && compteur>7){
-            System.out.println("Vous avez gagne");
-            System.out.println("Vous avez effectue " + (compteur+1) + " coups");
+            
+            else if (nb != nombre) {
+            System.out.println("Vous avez perdu");
+            System.out.println("Vous avez effectue " + compteur + " coups");
             }
         }
         
         else {
             System.out.println("La saisie est incorrecte, veuillez recommencer.");
         }
-        
     }
 }
