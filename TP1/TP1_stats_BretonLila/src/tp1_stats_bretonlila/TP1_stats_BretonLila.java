@@ -82,7 +82,6 @@ public class TP1_stats_BretonLila {
         System.out.println((nb2/m)*100 + " % de " + 2);
         System.out.println((nb3/m)*100 + " % de " + 3);
         System.out.println((nb4/m)*100 + " % de " + 4);
-        System.out.println((nb5/m)*100 + " % de " + 5);        
-        
+        System.out.println((nb5/m)*100 + " % de " + 5);
     }
 }
