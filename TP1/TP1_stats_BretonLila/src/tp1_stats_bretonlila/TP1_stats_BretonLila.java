@@ -85,5 +85,4 @@ public class TP1_stats_BretonLila {
         System.out.println((nb5/m)*100 + " % de " + 5);        
         
     }
-    
 }
