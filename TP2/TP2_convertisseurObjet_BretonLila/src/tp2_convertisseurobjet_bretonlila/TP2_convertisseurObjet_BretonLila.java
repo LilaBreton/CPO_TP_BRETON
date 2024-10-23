@@ -68,8 +68,9 @@ public class TP2_convertisseurObjet_BretonLila {
         
         
         
-        
-        while (type<=6 && type>=1){
+        int type;
+        type = 0;
+        while (type<=6){
             System.out.println("Saisissez le type de conversion que vous souhaitez effectuer :");
             System.out.println("1) De Celcius vers Kelvin");
             System.out.println("2) De Kelvin vers Celcius");
@@ -79,8 +80,7 @@ public class TP2_convertisseurObjet_BretonLila {
             System.out.println("6) De Farenheit vers Kelvin");
             System.out.println("Si vous souhaitez arreter la conversion entrez un autre chiffre");
         
-            int type;
-            type = 0;
+            
             type = sc.nextInt();
             System.out.println("Entrez une temperature :");
             temperature = sc.nextDouble();
@@ -123,5 +123,4 @@ public class TP2_convertisseurObjet_BretonLila {
             }
         }  
     }
-    
 }
