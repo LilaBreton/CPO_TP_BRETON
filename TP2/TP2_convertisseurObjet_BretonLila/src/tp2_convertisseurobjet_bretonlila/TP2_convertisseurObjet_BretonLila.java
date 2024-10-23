@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*Lila Breton
 * TDC
-* TP2 Exercice 1
+* TP2 Exercice 2
 * 23 Octobre 2024
  */
 

@@ -2,7 +2,7 @@ package tp2_convertisseurobjet_bretonlila;
 
 /*Lila Breton
 * TDC
-* TP2 Exercice 1
+* TP2 Exercice 2
 * 23 Octobre 2024
  */
 
