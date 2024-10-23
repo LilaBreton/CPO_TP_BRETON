@@ -29,8 +29,26 @@ public class TP2_Bieres_BretonLila {
         //secondeBiere.ouverte = false;
         //secondeBiere.lireEtiquette();
         
+        BouteilleBiere uneBiere = new BouteilleBiere("Cuvee des trolls",7.0 ,"Dubuisson") ;
+        uneBiere.lireEtiquette();
         BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6.6,"Abbaye de Leffe") ;
         autreBiere.lireEtiquette();
+        BouteilleBiere troisiemeBiere = new BouteilleBiere("Heineken" ,5 ,"Gerard Heineken") ;
+        troisiemeBiere.lireEtiquette();
+        BouteilleBiere quatriemeBiere = new BouteilleBiere("Desperados" ,5.9 ,"Alken-Maes") ;
+        quatriemeBiere.lireEtiquette();
+        BouteilleBiere derniereBiere = new BouteilleBiere("Corona" ,4.5 ,"Grupo Modelo") ;
+        derniereBiere.lireEtiquette();
+        
+        uneBiere.decapsuler();
+        autreBiere.decapsuler();
+        quatriemeBiere.decapsuler();
+        
+        System.out.println(uneBiere);
+        System.out.println(autreBiere);
+        System.out.println(troisiemeBiere);
+        System.out.println(quatriemeBiere);
+        System.out.println(derniereBiere);
     }
     
 }
