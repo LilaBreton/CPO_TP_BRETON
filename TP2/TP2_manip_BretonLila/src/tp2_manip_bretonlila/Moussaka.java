@@ -16,6 +16,5 @@ public class Moussaka {
     // Constructeur pour initialiser nbCalories
     public Moussaka(int calories) {
         this.nbCalories = calories;
-    }
-        
+    }    
 }

@@ -46,10 +46,4 @@ public class TP2_manip_BretonLila {
             System.out.println("Moussaka " + i + " a " + tableauMoussaka[i].nbCalories + " calories.");
         }
     }
-   
-}
-
-        
-    }
-    
 }

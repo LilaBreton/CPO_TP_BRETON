@@ -16,8 +16,5 @@ public class Tartiflette {
     // Constructeur pour initialiser nbCalories
     public Tartiflette(int calories) {
         this.nbCalories = calories;
-    }
-        
-    
-    
+    } 
 }
