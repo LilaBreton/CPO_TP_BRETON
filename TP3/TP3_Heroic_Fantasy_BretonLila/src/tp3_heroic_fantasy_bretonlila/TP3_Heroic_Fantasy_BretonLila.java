@@ -5,6 +5,9 @@
  */
 package tp3_heroic_fantasy_bretonlila;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.Epee;
 import Armes.Baton;
 import Armes.Arme;
@@ -30,7 +33,6 @@ public class TP3_Heroic_Fantasy_BretonLila {
         System.out.println(Che);
         System.out.println(Cha);
         
-        
         ArrayList <Arme> Armes = new ArrayList <Arme>();
         Armes.add(Exc);
         Armes.add(Dur);
@@ -39,6 +41,28 @@ public class TP3_Heroic_Fantasy_BretonLila {
         
         for (int i = 0; i<(Armes.size()); i++){
             System.out.println(Armes.get(i));
-        } 
+        }
+        
+        
+        Magicien Gan = new Magicien("Gandalf",65,true);
+        Magicien Gar = new Magicien("Garcimore",44,false);
+        Guerrier Con = new Guerrier("Conan", 78, false);
+        Guerrier Lan = new Guerrier("Lannister", 45, true);
+                
+        System.out.println(Gan);
+        System.out.println(Gar);
+        System.out.println(Con);
+        System.out.println(Lan);
+        
+        ArrayList <Personnage> Personnages = new ArrayList <Personnage>();
+        Personnages.add(Gan);
+        Personnages.add(Gar);
+        Personnages.add(Con);
+        Personnages.add(Lan);
+        
+        for (int i = 0; i<(Armes.size()); i++){
+            System.out.println(Personnages.get(i));
+        }
+        
     }
 }
