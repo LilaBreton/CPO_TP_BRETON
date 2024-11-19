@@ -22,7 +22,7 @@ public abstract class Personnage {
         this.Nom = Nom;
         this.NivVie = NivVie;
         this.TtArmes = new ArrayList<>();
-        this.Arme_en_Main = null
+        this.Arme_en_Main = null;
     }
     
     public String getNom() {
