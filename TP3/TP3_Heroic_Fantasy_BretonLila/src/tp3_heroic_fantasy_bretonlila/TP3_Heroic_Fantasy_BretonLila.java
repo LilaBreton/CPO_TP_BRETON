@@ -5,6 +5,9 @@
  */
 package tp3_heroic_fantasy_bretonlila;
 
+import Armes.Epee;
+import Armes.Baton;
+import Armes.Arme;
 import java.util.ArrayList;
 
 /**
@@ -34,6 +37,9 @@ public class TP3_Heroic_Fantasy_BretonLila {
         Armes.add(Che);
         Armes.add(Cha);
         
+        for (int i = 0; i<(Armes.size()); i++){
+            System.out.println(Armes.get(i));
+        } 
     }
-    
+
 }

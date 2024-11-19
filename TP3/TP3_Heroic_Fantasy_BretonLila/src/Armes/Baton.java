@@ -3,7 +3,9 @@
 * TP3 Exercice 1
 * 13 Novembre 2024
  */
-package tp3_heroic_fantasy_bretonlila;
+package Armes;
+
+import Armes.Arme;
 
 /**
  *
