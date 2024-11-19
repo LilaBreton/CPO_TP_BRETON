@@ -41,5 +41,4 @@ public class TP3_Heroic_Fantasy_BretonLila {
             System.out.println(Armes.get(i));
         } 
     }
-
 }
