@@ -64,5 +64,18 @@ public class TP3_Heroic_Fantasy_BretonLila {
             System.out.println(Personnages.get(i));
         }
         
+        Baton Mys = new Baton("Mystique", 20, 80);
+        Epee Enc = new Epee("Enchantée", 40, 90);
+        
+        Con.ajouterArme(Che);
+        Con.ajouterArme(Exc);
+        Con.ajouterArme(Dur);
+        Con.equiperArme("Excalibur");
+        
+        Gan.ajouterArme(Cha);
+        Gan.ajouterArme(Mys);
+        Gan.ajouterArme(Enc);
+        
+        
     }
 }
