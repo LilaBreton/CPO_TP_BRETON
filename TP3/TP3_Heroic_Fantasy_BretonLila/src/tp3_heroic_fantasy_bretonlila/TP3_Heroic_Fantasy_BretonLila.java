@@ -65,7 +65,7 @@ public class TP3_Heroic_Fantasy_BretonLila {
         }
         
         Baton Mys = new Baton("Mystique", 20, 80);
-        Epee Enc = new Epee("Enchantée", 40, 90);
+        Epee Enc = new Epee("Enchantee", 40, 90);
         
         Con.ajouterArme(Che);
         Con.ajouterArme(Exc);
@@ -76,6 +76,10 @@ public class TP3_Heroic_Fantasy_BretonLila {
         Gan.ajouterArme(Mys);
         Gan.ajouterArme(Enc);
         
-        
+        System.out.println("Le nombre d'armes preferees de Gandalf est : " + Gan.ArmesPref());
+
+        for (Personnage personnage : Personnages) {
+            System.out.println(personnage);
+        }
     }
 }

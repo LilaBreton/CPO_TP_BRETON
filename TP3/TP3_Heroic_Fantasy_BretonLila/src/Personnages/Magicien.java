@@ -5,6 +5,9 @@
  */
 package Personnages;
 
+import Armes.Arme;
+import Armes.Baton;
+
 /**
  *
  * @author lilab
@@ -23,5 +26,15 @@ public class Magicien extends Personnage {
     
     public boolean getConfirme() {
         return Confirme;
+    }
+    
+    public int ArmesPref() {
+        int nb = 0;
+        for (Object arme : getTtArmes()) {
+            if (arme instanceof Baton) { 
+                nb++;
+            }
+        }
+        return nb;
     }
 }

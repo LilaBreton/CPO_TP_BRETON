@@ -28,6 +28,6 @@ public abstract class Arme {
     
     @Override
     public String toString(){
-        return "Le nom de l arme est : " + Nom + " et son niveau d attaque est : " + NivAtt;        
+        return Nom + ", Niveau d attaque : " + NivAtt;        
     }
 }

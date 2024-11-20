@@ -33,10 +33,15 @@ public abstract class Personnage {
         return NivVie;
     }
     
+    public ArrayList getTtArmes() {
+        return TtArmes;
+    }
+    
     public void ajouterArme(Arme arme) {
         if (TtArmes.size() < 5) {
             TtArmes.add(arme);
-        } else {
+        } 
+        else {
             System.out.println("Le personnage ne peut pas posseder plus de 5 armes");
         }
     }
@@ -58,6 +63,21 @@ public abstract class Personnage {
     
     @Override
     public String toString(){
-        return "Le nom du personnage est : " + Nom + ", son niveau de vie est : " + NivVie + " et son arme en main est : " + (Arme_en_Main != null ? Arme_en_Main : "aucune");     
+        //return "Le nom du personnage est : " + Nom + ", son niveau de vie est : " + NivVie + " et son arme en main est : " + (Arme_en_Main != null ? Arme_en_Main : "aucune");     
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nom : ").append(Nom)
+            .append(", Niveau de vie : ").append(NivVie)
+            .append(", Arme en main : ").append(Arme_en_Main != null ? Arme_en_Main : "aucune")
+            .append(", Stock d'armes : [");
+        for (Arme arme : TtArmes) {
+            sb.append(arme.getNom()).append(", ");
+        }
+        if (!TtArmes.isEmpty()) {
+            sb.setLength(sb.length() - 2); // Enlève la dernière virgule
+        }
+        sb.append("]");
+        return sb.toString();
     }
+    
 }
