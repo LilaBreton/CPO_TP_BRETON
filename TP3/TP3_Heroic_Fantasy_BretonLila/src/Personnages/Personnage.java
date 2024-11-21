@@ -17,12 +17,14 @@ public abstract class Personnage {
     private int NivVie;
     private ArrayList<Arme> TtArmes;
     private Arme Arme_en_Main;
+    private static int NbPersonnages = 0;
 
     public Personnage(String Nom, int NivVie) {
         this.Nom = Nom;
         this.NivVie = NivVie;
         this.TtArmes = new ArrayList<>();
         this.Arme_en_Main = null;
+        NbPersonnages++;
     }
     
     public String getNom() {
@@ -61,6 +63,15 @@ public abstract class Personnage {
         System.out.println("L arme " + nomArme + " n a pas ete trouvee dans les armes");
     }
     
+    public static int getNbPersonnages() {
+        return NbPersonnages;
+    }
+    
+    public void finalize(){
+        NbPersonnages--;
+        System.out.println("Nombre de personnages restants en jeu : " + NbPersonnages);
+    }
+    
     @Override
     public String toString(){
         //return "Le nom du personnage est : " + Nom + ", son niveau de vie est : " + NivVie + " et son arme en main est : " + (Arme_en_Main != null ? Arme_en_Main : "aucune");     
@@ -79,5 +90,4 @@ public abstract class Personnage {
         sb.append("]");
         return sb.toString();
     }
-    
 }

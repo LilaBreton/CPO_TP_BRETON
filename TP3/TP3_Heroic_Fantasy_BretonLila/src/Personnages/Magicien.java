@@ -14,10 +14,12 @@ import Armes.Baton;
  */
 public class Magicien extends Personnage {
     private boolean Confirme;
+    private static int NbMagiciens = 0;
     
     public Magicien(String Nom, int NivVie, boolean Confirme) {
         super(Nom, NivVie);
         this.Confirme = Confirme;
+        NbMagiciens++;
     }
     
     public void setConfirme(boolean Confirme) {
@@ -36,5 +38,14 @@ public class Magicien extends Personnage {
             }
         }
         return nb;
+    }
+    
+    public static int getNbMagiciens() {
+        return NbMagiciens;
+    }
+    
+    public void finalize(){
+        NbMagiciens--;
+        System.out.println("Nombre de magiciens restants en jeu : " + NbMagiciens);
     }
 }

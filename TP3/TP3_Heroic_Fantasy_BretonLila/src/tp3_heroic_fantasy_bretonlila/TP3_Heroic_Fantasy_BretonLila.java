@@ -81,5 +81,12 @@ public class TP3_Heroic_Fantasy_BretonLila {
         for (Personnage personnage : Personnages) {
             System.out.println(personnage);
         }
+        
+        System.out.println("Nombre de personnages en jeu : " + Personnage.getNbPersonnages());
+        System.out.println("Nombre de guerriers en jeu : " + Guerrier.getNbGuerriers());
+        System.out.println("Nombre de magiciens en jeu : " + Magicien.getNbMagiciens());
+        
+        Lan.finalize();
+        Gar.finalize();
     }
 }
